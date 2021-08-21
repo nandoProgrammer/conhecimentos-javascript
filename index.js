@@ -59,8 +59,6 @@ const funcaoAnonima = function(){
 	console.log('ok');
 }
 
-funcaoAnonima();
-
 
 //Função anônima em callback
 function callbackAnonimo(func){
@@ -100,8 +98,14 @@ document.querySelector('.injetarConteudo').innerHTML = "<b>Olá Mundo</b>";
 document.getElementById("quadrado").style.backgroundColor = "#000";
 
 //Eventos
+
 //onClick
-//
+//onFocus
+//onKeyPress
+//onLoad
+//onMouseOver
+//onMouseOut
+//onSubmit
 
 //pegar o valor de um input 
 const button = document.querySelector('button');
@@ -110,6 +114,9 @@ button.onclick = function(){
 	var getValueText = document.querySelector('input[name=texto]').value;
 	console.log(getValueText);
 }
+
+
+
 
 
 
@@ -144,6 +151,9 @@ arr.forEach(function(item, index){
 
 });
 
+//Inverter a ordem dos itens do array
+arr.reverse();
+
 //Adicionar um item ao final do array
 arr.push('novo item');
 
@@ -155,6 +165,9 @@ arr.unshift('novo item');
 
 //Remover o item do início do array
 arr.shift();
+
+//Encontrar um item em um array
+arr.indexOf(3);
 
 //Remover um item pela posição do array
 arr.splice(0, 1);
@@ -175,11 +188,40 @@ const filtraPares = function(item){
 
 const pares = numeros.filter(filtraPares);
 
+//map
+const dobraValor = function(item){
+   return item * 2;
+}
+
+const valoresDobrados = numeros.map(dobraValor);
+
+
+//reduce
+const reducer = function(acumulador, item){
+  return acumulador + item;
+}
+
+const valoresSomados = numeros.reduce(reducer);
+
+
+
+
 
 //Remover itens repetidos em um array
 const itensRepetidos = [1,2,3,4,1,4,5,5,4,3];
 const removeRepetidos = new Set(itensRepetidos);
 const semItensRepetidos = [...removeRepetidos];
+
+
+//Encontrar um item em um objeto
+const obj = [{index: 0, content: 'Hello World'}, {index: 1, content: 'Olá Mundo'}];
+
+function getHelloWord(item){
+    return item.content === 'Hello World';
+}
+
+console.log(obj.find(getHelloWord));
+
 
 
 //Timming Events
@@ -199,25 +241,3 @@ clearTimeout(delay);
 
 //Evitar que aconteça o setInterval
 clearInterval(repeatInterval);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
