@@ -13,3 +13,11 @@ const pessoa = {
 //Acessando item do objeto
 pessoa.nome;
 
+
+//Atribuindo atributo a objeto
+pessoa.sexo = 'Masculino';
+
+
+
+
+

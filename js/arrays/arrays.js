@@ -60,8 +60,12 @@ const arrMultidimensional = [[1,2,3],[4,5,6]];
 //Acessando item de array multidimensional
 arrMultidimensional[0][0];
 
-//Concatenando arrays
+//Concatenando arrays (rest)
 const arr1 = [1, 2, 3];
 const arr2 = [...arr1, 3, 4, 5];
 
-
+//Imutabilidade
+const arrConstante = [1,2,3];
+arrConstante[0] = 4;
+arrConstante[1] = 5;
+arrConstante[2] = 6;

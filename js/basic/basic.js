@@ -54,6 +54,22 @@ if(num1 == 1){
 }
 
 
+//Switch
+
+const letra = 'x';
+
+switch(letra){
+	case 'a': 
+	console.log('é a letra x');
+
+	case 'b':
+	console.log('é a letra b');
+
+	default: 
+	console.log(`é a letra ${letra}`);
+}
+
+
 //Função Anônima
 const funcaoAnonima = function(){
 	console.log('ok');
@@ -101,7 +117,7 @@ console.log(now);
 //Laços
 
 //for
-for(let i = 0; i < 5; i ++){
+for(let i = 0; i < 5; i++){
 	console.log(i);
 }
 
@@ -115,3 +131,11 @@ while(j<5){
 
 
 //do while
+let k = 0;
+
+do{
+
+   console.log(k);
+   k++;
+
+}while(k < 5);
