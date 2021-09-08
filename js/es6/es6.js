@@ -70,5 +70,15 @@ requestFunction("https://api.github.com/users/devfodex")
 
 
 
-
 //Fetch
+fetch("https://api.github.com/users/devfodex")
+.then(function(resposta){
+	return resposta.json();
+})
+.then(function(data){
+    console.log(data);
+})
+.catch(function(erro){
+	console.warn(erro);
+})
+
